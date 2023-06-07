@@ -14,9 +14,9 @@ describe('MedScan App Test ', function () {
     })
     it('should be able to get side effects of Flustat', function () {
         var medScan = MedScan()
-        medScan.getNameOfProduct('Allergex')
+        medScan.getNameOfProduct('Flustat')
 
-        assert.deepEqual('all', medScan.getSideEffects())
+        assert.deepEqual('fatigue', medScan.getSideEffects())
     })
     it('should be able to get Allergens of Medazine', function () {
         var medScan = MedScan()

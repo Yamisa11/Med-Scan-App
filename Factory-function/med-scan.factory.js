@@ -8,7 +8,7 @@ function MedScan() {
 
     var pharma_products = [
         { image: "url", names: 'Alcophyllex', usages: 'a', side_effects: 'al', allergens: '', precautions: '1' },
-        { image: "url", names: 'Flustat', usages: 'b', side_effects: 'fl', allergens: '', precautions: '2' },
+        { image: "url", names: 'Flustat', usages: 'b', side_effects: 'fatigue', allergens: '', precautions: '2' },
         { image: "url", names: 'Soflax', usages: 'c', side_effects: 'so', allergens: '', precautions: '3' },
         { image: "url", names: 'Allergex', usages: 'd', side_effects: 'all', allergens: '', precautions: '4' },
         { image: "url", names: 'Medazine', usages: 'e', side_effects: 'me', allergens: 'rash', precautions: '5' },
