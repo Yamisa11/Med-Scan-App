@@ -52,7 +52,6 @@ function MedScan() {
         for (var i = 0; pharma_products.length < 7; i++) {
             if (pharma_products[i].names == name_of_product) {
                 for (const y in pharma_products[i]) {
-                    // console.log(pharma_products[i]);
                     side_effect = pharma_products[i].side_effects
 
                 }
