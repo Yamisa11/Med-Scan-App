@@ -4,7 +4,7 @@ function MedScan() {
     var allergen = ''
     var side_effect = ''
     var precaution = ''
-
+    var nameprod = ''
 
     var pharma_products = [
         { image: "url", names: 'Alcophyllex', usages: 'a', side_effects: 'dc', allergens: 'f', precautions: 'r' },
@@ -15,23 +15,20 @@ function MedScan() {
         { image: "url", names: 'Alcophyllex', usages: 'd', side_effects: 'e', allergens: 'f', precautions: 't' }
     ]
 
-
-    function x() {
-        for (var i = 0; i > pharma_products.length; i++) {
-            console.log(pharma_products.names)
-        }
-    }
     function getPrecautions() {
         return precaution
     }
+    function getNameOfProduct(name_of_product) {
+        nameprod = name_of_product
+        return nameprod
+    }
 
-    function getPrecautions(name_of_product) {
+    function getPrecautions() {
         for (var i = 0; pharma_products.length < 7; i++) {
-            if (pharma_products[i].names == name_of_product) {
+            if (pharma_products[i].names == nameprod) {
                 for (const y in pharma_products[i]) {
                     // console.log(pharma_products[i]);
                     precaution = pharma_products[i].precautions
-
                 }
                 return precaution
             }
@@ -121,6 +118,10 @@ function MedScan() {
     }
 
     return {
-        getImage, getUsages, getSideEffects, getAllergens, errorHandling, getPrecautions, x
+        getImage, getUsages, getSideEffects, getAllergens, errorHandling, getPrecautions, getNameOfProduct
     }
 }
+
+
+
+
