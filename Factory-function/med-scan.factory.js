@@ -4,30 +4,27 @@ function MedScan() {
     var allergen = ''
     var side_effect = ''
     var precaution = ''
-    var nameprod = ''
+    var product_name = ''
 
     var pharma_products = [
-        { image: "url", names: 'Alcophyllex', usages: 'a', side_effects: 'dc', allergens: 'f', precautions: 'r' },
-        { image: "url", names: 'Alcophyllex', usages: 'c', side_effects: 'd', allergens: 'f', precautions: 'r' },
-        { image: "url", names: 'Soflax', usages: 'f', side_effects: 'f', allergens: 'fente', precautions: '3' },
-        { image: "url", names: 'Alcophyllex', usages: 'cd', side_effects: 'd', allergens: 'f', precautions: 't' },
-        { image: "url", names: 'Alcophyllex', usages: 'd', side_effects: 'd', allergens: 'f', precautions: 't' },
-        { image: "url", names: 'Alcophyllex', usages: 'd', side_effects: 'e', allergens: 'f', precautions: 't' }
+        { image: "url", names: 'Alcophyllex', usages: 'a', side_effects: 'al', allergens: '', precautions: '1' },
+        { image: "url", names: 'Flustat', usages: 'b', side_effects: 'fatigue', allergens: '', precautions: '2' },
+        { image: "url", names: 'Soflax', usages: 'c', side_effects: 'so', allergens: '', precautions: '3' },
+        { image: "url", names: 'Allergex', usages: 'd', side_effects: 'all', allergens: '', precautions: '4' },
+        { image: "url", names: 'Medazine', usages: 'e', side_effects: 'me', allergens: 'rash', precautions: '5' },
+        { image: "url", names: 'Gastropect', usages: 'f', side_effects: 'ga', allergens: 'sodium', precautions: '6' }
     ]
 
-    function getPrecautions() {
-        return precaution
-    }
+   
     function getNameOfProduct(name_of_product) {
-        nameprod = name_of_product
-        return nameprod
+        product_name = name_of_product
+        return product_name
     }
 
     function getPrecautions() {
         for (var i = 0; pharma_products.length < 7; i++) {
-            if (pharma_products[i].names == nameprod) {
+            if (pharma_products[i].names == product_name) {
                 for (const y in pharma_products[i]) {
-                    // console.log(pharma_products[i]);
                     precaution = pharma_products[i].precautions
                 }
                 return precaution
@@ -35,11 +32,10 @@ function MedScan() {
         }
     }
 
-    function getAllergens(name_of_product) {
+    function getAllergens() {
         for (var i = 0; pharma_products.length < 7; i++) {
-            if (pharma_products[i].names == name_of_product) {
+            if (pharma_products[i].names == product_name) {
                 for (const y in pharma_products[i]) {
-                    // console.log(pharma_products[i]);
                     allergen = pharma_products[i].allergens
 
                 }
@@ -48,9 +44,9 @@ function MedScan() {
         }
     }
 
-    function getSideEffects(name_of_product) {
+    function getSideEffects() {
         for (var i = 0; pharma_products.length < 7; i++) {
-            if (pharma_products[i].names == name_of_product) {
+            if (pharma_products[i].names == product_name) {
                 for (const y in pharma_products[i]) {
                     side_effect = pharma_products[i].side_effects
 
@@ -60,11 +56,10 @@ function MedScan() {
         }
     }
 
-    function getUsages(name_of_product) {
+    function getUsages() {
         for (var i = 0; pharma_products.length < 7; i++) {
-            if (pharma_products[i].names == name_of_product) {
+            if (pharma_products[i].names == product_name) {
                 for (const y in pharma_products[i]) {
-                    // console.log(pharma_products[i]);
                     usage = pharma_products[i].usages
 
                 }
@@ -73,11 +68,10 @@ function MedScan() {
         }
     }
 
-    function getImage(name_of_product) {
+    function getImage() {
         for (var i = 0; pharma_products.length < 7; i++) {
-            if (pharma_products[i].names == name_of_product) {
+            if (pharma_products[i].names == product_name) {
                 for (const y in pharma_products[i]) {
-                    // console.log(pharma_products[i]);
                     images = pharma_products[i].image
 
                 }
@@ -86,32 +80,8 @@ function MedScan() {
         }
     }
 
-
-    //     images = pharma_products[i].image
-    //     usage = pharma_products[i].usages
-    //     side_effect = pharma_products[i].side_effects
-    //     allergen = pharma_products[i].allergens
-    //     precaution = pharma_products[i].precautions
-
-
-
-    // function getImage() {
-    //     return images
-    // }
-
-    // function getUsages() {
-    //     return usage
-    // }
-
-    // function getSideEffects() {
-    //     return side_effect
-    // }
-    // function getAllergens() {
-    //     return allergen
-    // }
-
-
-
+   
+    
     function errorHandling() {
 
     }
