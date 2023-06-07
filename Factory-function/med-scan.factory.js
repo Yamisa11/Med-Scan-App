@@ -12,7 +12,7 @@ function MedScan() {
         { image: "url", names: 'Soflax', usages: 'c', side_effects: 'so', allergens: '', precautions: '3' },
         { image: "url", names: 'Allergex', usages: 'd', side_effects: 'all', allergens: '', precautions: '4' },
         { image: "url", names: 'Medazine', usages: 'e', side_effects: 'me', allergens: 'rash', precautions: '5' },
-        { image: "url", names: 'Gastropect', usages: 'f', side_effects: 'ga', allergens: '', precautions: '6' }
+        { image: "url", names: 'Gastropect', usages: 'f', side_effects: 'ga', allergens: 'sodium', precautions: '6' }
     ]
 
    
