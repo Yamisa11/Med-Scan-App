@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js" integrity="sha512-r6rDA7W6ZeQhvl8S7yRVQUKVHdexq+GAlNkNNqVC7YyIV+NwqCTJe2hDWCiffTyRNOeGEzRRJ9ifvRm/HCzGYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM sans">
+    <!-- <script src="html5-qrcode.min.js"></script> -->
+    
+    <title>MedScan App</title>
+</head>
+
+<body>
+    <div class="container1">
+
+        <div class="navbar">
+          <nav>
+            <a href="./allsaveddetails.html">View All</a>
+            <a href="./index.html">Scan</a>
+            <a href="./productdetails.html">Product Details</a>
+            
+          </nav>
+          
+           
+            <div class="dis"><span class="disp"></span></div>
+            
+          </div>
+          <h1 class="scan">MedScan</h1>
+          <div class="scanner" style="width: 500px" id="reader"></div>
+          
+    </div>
+
+    <div class="container2 hidden">
+      <div class="navbar">
+        <a href="#PPG">PP</a>
+        
+        <div class="dropdown">
+          
+          <select class="topics">
+
+            <option value="">
+              Filter results
+            </option>
+            <option value="all">Show All</option>
+            <option value="Uses">Uses</option>
+            <option value="Effects">Side Effects</option>
+            <option value="Prec">Precaution</option>
+            <option value="Aller">Allergens</option>
+          </select>
+        
+        </div> 
+      </div>
+      <div class="nameProd">
+        <h3 class="displayName"></h3>
+      </div>
+      <div class="images">
+        <img src="" class="image">
+      </div>
+      <div class="content">
+        <div><span class="displayUses"></span></div>
+        <div><span class="effects"></span></div>
+        <div><span class="displayPrecaution"></span></div>
+        <div><span class="Allergens"></span></div>
+      </div>
+    <button class="save">Save</button>
+    </div>
+
+    <div class="container3 hidden">
+      <!-- <div class="navbar">
+        <nav>
+          <a href="./allsaveddetails.html">View All</a>
+          <a href="./index.html">Scan</a>
+          <a href="./productdetails.html">Product Details</a>
+          
+        </nav> -->
+      
+    </div>
+    
+</body>
+<script src="./Factory-function/med-scan.factory.js"></script>
+<script src="./DOM/med-scan.dom.js"></script>
+</html>

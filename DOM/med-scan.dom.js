@@ -3,7 +3,6 @@ var displayAllergens = document.querySelector(".Allergens");
 var displayEffects = document.querySelector(".effects");
 var displayUses = document.querySelector(".displayUses");
 var filterTopic = document.querySelector(".topics");
-var showBtn = document.querySelector(".show");
 var saveBtn = document.querySelector(".save");
 var showAll = document.querySelector(".all");
 var dropDownSelected = document.querySelector("select");
