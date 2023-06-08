@@ -4,15 +4,15 @@ function MedScan() {
     var allergen = ''
     var side_effect = ''
     var precaution = ''
-    var product_name = ''
+    var nameprod = ''
 
     var pharma_products = [
         { image: "url", names: 'Alcophyllex', usages: 'a', side_effects: 'al', allergens: '', precautions: '1' },
-        { image: "url", names: 'Flustat', usages: 'b', side_effects: 'fl', allergens: '', precautions: '2' },
+        { image: "url", names: 'Flustat', usages: 'b', side_effects: 'fatigue', allergens: '', precautions: '2' },
         { image: "url", names: 'Soflax', usages: 'c', side_effects: 'so', allergens: '', precautions: '3' },
         { image: "url", names: 'Allergex', usages: 'd', side_effects: 'all', allergens: '', precautions: '4' },
-        { image: "url", names: 'Medazine', usages: 'e', side_effects: 'me', allergens: '', precautions: '5' },
-        { image: "url", names: 'Gastropect', usages: 'f', side_effects: 'ga', allergens: '', precautions: '7' }
+        { image: "url", names: 'Medazine', usages: 'e', side_effects: 'me', allergens: 'rash', precautions: '5' },
+        { image: "url", names: 'Gastropect', usages: 'f', side_effects: 'ga', allergens: 'sodium', precautions: '7' }
     ]
 
 
@@ -47,6 +47,8 @@ function MedScan() {
     function getSideEffects() {
         for (var i = 0; pharma_products.length < 7; i++) {
             if (pharma_products[i].names == product_name) {
+        for (var i = 0; pharma_products.length < 7; i++) {
+            if (pharma_products[i].names == product_name) {
                 for (const y in pharma_products[i]) {
                     side_effect = pharma_products[i].side_effects
 
@@ -57,6 +59,8 @@ function MedScan() {
     }
 
     function getUsages() {
+        for (var i = 0; pharma_products.length < 7; i++) {
+            if (pharma_products[i].names == product_name) {
         for (var i = 0; pharma_products.length < 7; i++) {
             if (pharma_products[i].names == product_name) {
                 for (const y in pharma_products[i]) {
@@ -71,6 +75,8 @@ function MedScan() {
     function getImage() {
         for (var i = 0; pharma_products.length < 7; i++) {
             if (pharma_products[i].names == product_name) {
+        for (var i = 0; pharma_products.length < 7; i++) {
+            if (pharma_products[i].names == product_name) {
                 for (const y in pharma_products[i]) {
                     images = pharma_products[i].image
 
@@ -82,8 +88,9 @@ function MedScan() {
 
 
 
+
     return {
-        getImage, getUsages, getSideEffects, getAllergens, errorHandling, getPrecautions, getNameOfProduct, errorHandling
+        getImage, getUsages, getSideEffects, getAllergens, errorHandling, getPrecautions, getNameOfProduct
     }
 }
 
