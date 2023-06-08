@@ -77,7 +77,7 @@ html5QrcodeScanner.render(onScanSuccess);
 // });
 
 dropDownSelected.addEventListener("change", (event) => {
-  var data = JSON.parse(localStorage.getItem("Products"));
+    var data = JSON.parse(localStorage.getItem("Products"));
   var { value } = event.target.options[event.target.selectedIndex];
 
   if (filterTopic.value == "all") {
@@ -112,9 +112,10 @@ dropDownSelected.addEventListener("change", (event) => {
   }
 });
 
-// saveBtn.addEventListener("click", function(){
-//     var productList = []
-// productList.push(data)
-// localStorage["productList"] = JSON.stringify(productList)
-// })
+var productList = []
+var data = JSON.parse(localStorage.getItem("Products"));
+saveBtn.addEventListener("click", function(){
+productList.push(data)
+localStorage.setItem("savedItem", JSON.stringify(productList));
+})
 
