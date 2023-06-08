@@ -9,9 +9,10 @@ var dropDownSelected = document.querySelector("select");
 var container1 = document.querySelector(".container1");
 var container2 = document.querySelector(".container2");
 var container3 = document.querySelector(".container3");
+var picture = document.querySelector(".image");
 let divElm = document.querySelector(".content");
 
-
+var pic_img = "";
 var Precautionvalue = "";
 var usesValue = "";
 var allergensValue = "";
@@ -28,10 +29,12 @@ function onScanSuccess(decodedText, decodedResult) {
   medScan.getNameOfProduct(decodedText);
   Precautionvalue = medScan.getPrecautions();
   usesValue = medScan.getUsages();
+  pic_img = medScan.getImage();
   allergensValue = medScan.getAllergens();
   effectsValue = medScan.getSideEffects();
 
   product = {
+    image: pic_img,
     theName: decodedText,
     precaut: Precautionvalue,
     use: usesValue,
@@ -44,10 +47,11 @@ function onScanSuccess(decodedText, decodedResult) {
   container2.classList.remove("hidden");
   container3.classList.add("hidden");
 
-  var data = JSON.parse(localStorage.getItem("Products"))
+  var data = JSON.parse(localStorage.getItem("Products"));
 
   divElm.style.display === "block";
   console.log(data);
+  picture.src = data.image; //stays on page
   displayPrecaution.innerHTML = data.precaut;
   displayAllergens.innerHTML = data.allergy;
   displayEffects.innerHTML = data.effect;
@@ -72,16 +76,16 @@ html5QrcodeScanner.render(onScanSuccess);
 // }
 // });
 
-dropDownSelected.addEventListener("change", (event) =>{
-    var data = JSON.parse(localStorage.getItem("Products"))
-    var {value} = event.target.options[event.target.selectedIndex]
-   
-    if (filterTopic.value == "all") {
-        displayPrecaution.innerHTML = data.precaut;
-        displayAllergens.innerHTML = data.allergy;
-        displayEffects.innerHTML = data.effect
-        displayUses.innerHTML = data.use;
-      }
+dropDownSelected.addEventListener("change", (event) => {
+  var data = JSON.parse(localStorage.getItem("Products"));
+  var { value } = event.target.options[event.target.selectedIndex];
+
+  if (filterTopic.value == "all") {
+    displayPrecaution.innerHTML = data.precaut;
+    displayAllergens.innerHTML = data.allergy;
+    displayEffects.innerHTML = data.effect;
+    displayUses.innerHTML = data.use;
+  }
   if (filterTopic.value == "Effects") {
     displayPrecaution.innerHTML = "";
     displayAllergens.innerHTML = "";
@@ -113,4 +117,4 @@ dropDownSelected.addEventListener("change", (event) =>{
 // productList.push(data)
 // localStorage["productList"] = JSON.stringify(productList)
 // })
-// window.location.href="../pages/productdetails.html";
+
