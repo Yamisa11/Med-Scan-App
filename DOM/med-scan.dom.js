@@ -5,12 +5,17 @@ var displayUses = document.querySelector(".displayUses");
 var filterTopic = document.querySelector(".topics");
 var scan_again = document.querySelector(".scanagain");
 var showAll = document.querySelector(".all");
+var saveBtn = document.querySelector('.save')
 var dropDownSelected = document.querySelector("select");
 var container1 = document.querySelector(".container1");
 var container2 = document.querySelector(".container2");
 var container3 = document.querySelector(".container3");
 var picture = document.querySelector(".image");
 let divElm = document.querySelector(".content");
+var viewAllBtn = document.querySelector('.viewAll')
+let allContent = document.querySelector(".allContent");
+let allImage = document.querySelector(".allImage");
+let allView = document.querySelector(".allView");
 
 var pic_img = "";
 var Precautionvalue = "";
@@ -18,6 +23,7 @@ var usesValue = "";
 var allergensValue = "";
 var effectsValue = "";
 var product = {};
+var productList = []
 
 // var data = JSON.parse(localStorage.getItem("Products")) || [];
 // console.log(data.theName);
@@ -52,10 +58,10 @@ function onScanSuccess(decodedText, decodedResult) {
   divElm.style.display === "block";
   console.log(data);
   picture.src = data.image; //stays on page
+  displayUses.innerHTML = data.use;
+  displayEffects.innerHTML = data.effect;
   displayPrecaution.innerHTML = data.precaut;
   displayAllergens.innerHTML = data.allergy;
-  displayEffects.innerHTML = data.effect;
-  displayUses.innerHTML = data.use;
 }
 
 var html5QrcodeScanner = new Html5QrcodeScanner("reader", {
@@ -112,12 +118,48 @@ dropDownSelected.addEventListener("change", (event) => {
   }
 });
 
-var productList = []
-var data = JSON.parse(localStorage.getItem("Products"));
+
+
 
 scan_again.addEventListener("click", function(){
   container1.classList.remove("hidden");
   container2.classList.add("hidden");
 
+})
+
+saveBtn.addEventListener("click", function (){
+  var data = JSON.parse(localStorage.getItem("Products"));
+  productList.push(data)
+  localStorage.setItem("savedList", JSON.stringify(productList))
+})
+
+viewAllBtn.addEventListener('click', function (){
+  container1.classList.add("hidden");
+  container2.classList.add("hidden");
+  container3.classList.remove("hidden");
+  var data = JSON.parse(localStorage.getItem("savedList"));
+
+  for (let i = 0; i < data.length; i++) {
+    var imagDiv = document.createElement("img");
+    imagDiv.src = data[i].use;
+    allContent.appendChild(imagDiv);
+    var usesDiv = document.createElement("div");
+    allUses = document.createTextNode(data[i].use);
+    usesDiv.appendChild(allUses);
+    allContent.appendChild(usesDiv);
+    var effectsDiv = document.createElement("div");
+    allEffects = document.createTextNode(data[i].effect);
+    effectsDiv.appendChild(allEffects);
+    allContent.appendChild(effectsDiv);
+    var precauDiv = document.createElement("div");
+    allPrecau = document.createTextNode(data[i].precaut);
+    precauDiv.appendChild(allPrecau);
+    allContent.appendChild(precauDiv);
+    var allerDiv = document.createElement("div");
+    allAller = document.createTextNode(data[i].allergy);
+    allerDiv.appendChild(allAller);
+    allContent.appendChild(allerDiv);
+    
+  }
 })
 
