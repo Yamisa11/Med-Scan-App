@@ -5,7 +5,8 @@ var displayUses = document.querySelector(".displayUses");
 var filterTopic = document.querySelector(".topics");
 var showBtn = document.querySelector(".show");
 var saveBtn = document.querySelector(".save");
-
+var showAll = document.querySelector(".all");
+var dropDownSelected = document.querySelector("select");
 var container1 = document.querySelector(".container1");
 var container2 = document.querySelector(".container2");
 var container3 = document.querySelector(".container3");
@@ -72,7 +73,16 @@ html5QrcodeScanner.render(onScanSuccess);
 // }
 // });
 
-showBtn.addEventListener("click", function () {
+dropDownSelected.addEventListener("change", (event) =>{
+    var data = JSON.parse(localStorage.getItem("Products"))
+    var {value} = event.target.options[event.target.selectedIndex]
+   
+    if (filterTopic.value == "all") {
+        displayPrecaution.innerHTML = data.precaut;
+        displayAllergens.innerHTML = data.allergy;
+        displayEffects.innerHTML = data.effect
+        displayUses.innerHTML = data.use;
+      }
   if (filterTopic.value == "Effects") {
     displayPrecaution.innerHTML = "";
     displayAllergens.innerHTML = "";
