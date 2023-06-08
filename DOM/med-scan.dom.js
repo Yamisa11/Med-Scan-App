@@ -3,7 +3,7 @@ var displayAllergens = document.querySelector(".Allergens");
 var displayEffects = document.querySelector(".effects");
 var displayUses = document.querySelector(".displayUses");
 var filterTopic = document.querySelector(".topics");
-var saveBtn = document.querySelector(".save");
+var scan_again = document.querySelector(".scanagain");
 var showAll = document.querySelector(".all");
 var dropDownSelected = document.querySelector("select");
 var container1 = document.querySelector(".container1");
@@ -114,8 +114,10 @@ dropDownSelected.addEventListener("change", (event) => {
 
 var productList = []
 var data = JSON.parse(localStorage.getItem("Products"));
-saveBtn.addEventListener("click", function(){
-productList.push(data)
-localStorage.setItem("savedItem", JSON.stringify(productList));
+
+scan_again.addEventListener("click", function(){
+  container1.classList.remove("hidden");
+  container2.classList.add("hidden");
+
 })
 

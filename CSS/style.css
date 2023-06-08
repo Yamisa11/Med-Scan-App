@@ -74,13 +74,16 @@ body {
     border-color: black;
     padding: 2em;
     width: 200px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+   margin:auto;
 }
+
 h1{
     font-family: DM sans-serif;
+    margin: 2em;
 }
 .hidden{
   display: none;
+}
+body {
+  background-color:  rgb(119, 141, 169) ;
 }
