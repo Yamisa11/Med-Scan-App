@@ -76,7 +76,6 @@ function MedScan() {
             if (pharma_products[i].names == product_name) {
                 for (const y in pharma_products[i]) {
                     images = pharma_products[i].image
-
                 }
                 return images
             }
@@ -87,7 +86,7 @@ function MedScan() {
 
 
     return {
-        getImage, getUsages, getSideEffects, getAllergens, errorHandling, getPrecautions, getNameOfProduct
+        getImage, getUsages, getSideEffects, getAllergens,  getPrecautions, getNameOfProduct
     }
 }
 
