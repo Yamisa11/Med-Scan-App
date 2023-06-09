@@ -80,10 +80,10 @@ body {
    margin:auto;
 }
 
-h2{
+h1{
   text-align: center;
   
-    margin: 0.9em;
+    margin: 1.5em;
 }
 .hidden{
   display: none;
@@ -127,15 +127,15 @@ footer{
   bottom: 0;
   width: 100%;
 }
-h3,h4,h5{
+h2,h3,h5{
   text-align: center;
+  margin-top: 0.5em;
 }
 .heading{
   margin: 1em;
 }
 .medi{
   font-family:cursive;
-  font-size: larger;
 
 }
 select{
