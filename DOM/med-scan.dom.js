@@ -95,6 +95,10 @@ dropDownSelected.addEventListener("change", (event) => {
     displayAllergens.innerHTML = data.allergy;
     displayEffects.innerHTML = data.effect;
     displayUses.innerHTML = data.use;
+    l1.innerHTML = "Uses"
+    l3.innerHTML = "Precaution"
+    l4.innerHTML = "Allergens"
+    l2.innerHTML = "Side Effects: "
 
   }
   if (filterTopic.value == "Effects") {
@@ -163,22 +167,22 @@ viewAllBtn.addEventListener('click', function (){
 
   for (let i = 0; i < data.length; i++) {
     var imagDiv = document.createElement("img");
-    imagDiv.src = data[i].use;
+    imagDiv.src = data[i].image;
     allContent.appendChild(imagDiv);
     var usesDiv = document.createElement("div");
-    allUses = document.createTextNode(data[i].use);
+    allUses = document.createTextNode("Uses     :"+data[i].use);
     usesDiv.appendChild(allUses);
     allContent.appendChild(usesDiv);
     var effectsDiv = document.createElement("div");
-    allEffects = document.createTextNode(data[i].effect);
+    allEffects = document.createTextNode("Side Effects     :"+data[i].effect);
     effectsDiv.appendChild(allEffects);
     allContent.appendChild(effectsDiv);
     var precauDiv = document.createElement("div");
-    allPrecau = document.createTextNode(data[i].precaut);
+    allPrecau = document.createTextNode("Precautions     :"+data[i].precaut);
     precauDiv.appendChild(allPrecau);
     allContent.appendChild(precauDiv);
     var allerDiv = document.createElement("div");
-    allAller = document.createTextNode(data[i].allergy);
+    allAller = document.createTextNode("Allergens     :"+data[i].allergy);
     allerDiv.appendChild(allAller);
     allContent.appendChild(allerDiv);
     

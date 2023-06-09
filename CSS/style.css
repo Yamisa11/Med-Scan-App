@@ -103,7 +103,7 @@ img{
 
 .one{
 padding-left: 3em;
-float: left
+/* float: left */
 ;}
 .logo{
   border-radius: 50%;
@@ -119,10 +119,13 @@ button{
 }
 footer{
   background-color: #3b7193;
-  height: 2em;
+  height: 3.5em;
   text-align: center;
   margin-top: 3em;
-  
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 h3,h4{
   text-align: center;
