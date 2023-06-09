@@ -16,6 +16,10 @@ var viewAllBtn = document.querySelector('.viewAll')
 let allContent = document.querySelector(".allContent");
 let allImage = document.querySelector(".allImage");
 let allView = document.querySelector(".allView");
+let l1 = document.querySelector('.l1')
+let l2 = document.querySelector('.l2')
+let l3 = document.querySelector('.l3')
+let l4 = document.querySelector('.l4')
 
 var pic_img = "";
 var Precautionvalue = "";
@@ -91,30 +95,48 @@ dropDownSelected.addEventListener("change", (event) => {
     displayAllergens.innerHTML = data.allergy;
     displayEffects.innerHTML = data.effect;
     displayUses.innerHTML = data.use;
+
   }
   if (filterTopic.value == "Effects") {
     displayPrecaution.innerHTML = "";
     displayAllergens.innerHTML = "";
     displayEffects.innerHTML = data.effect;
     displayUses.innerHTML = "";
+    l1.innerHTML = ""
+    l3.innerHTML = ""
+    l4.innerHTML = ""
+    l2.innerHTML = "Side Effects: "
   }
   if (filterTopic.value == "Uses") {
     displayPrecaution.innerHTML = "";
     displayAllergens.innerHTML = "";
     displayEffects.innerHTML = "";
     displayUses.innerHTML = data.use;
+    l2.innerHTML = ""
+    l3.innerHTML = ""
+    l4.innerHTML = ""
+    l1.innerHTML = "Uses: "
   }
   if (filterTopic.value == "Aller") {
     displayPrecaution.innerHTML = "";
     displayAllergens.innerHTML = data.allergy;
     displayEffects.innerHTML = "";
     displayUses.innerHTML = "";
+    l2.innerHTML = ""
+    l3.innerHTML = ""
+    l1.innerHTML = ""
+    l4.innerHTML = "Allergens: "
+
   }
   if (filterTopic.value == "Prec") {
     displayPrecaution.innerHTML = data.precaut;
     displayAllergens.innerHTML = "";
     displayEffects.innerHTML = "";
     displayUses.innerHTML = "";
+    l2.innerHTML = ""
+    l1.innerHTML = ""
+    l4.innerHTML = ""
+    l3.innerHTML = "Precaution: "
   }
 });
 

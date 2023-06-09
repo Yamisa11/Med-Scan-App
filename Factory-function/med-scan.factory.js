@@ -12,7 +12,7 @@ function MedScan() {
         "https://pbs.twimg.com/media/FF6zUOpXwAMIbk6?format=jpg&name=small",
       names: "Alcophyllex",
       usages:
-        "Adults: 2 to 3 medicine measures (10 to 15 ml) every four hours Children 2 to 6 years: ½ to 1 medicine measure (2,5 to 5 ml) every four hours 7 to 12 years: 1 to 2 medicine measures (5 to 10 ml) every four hours. Not for use in children under 2 years of age.",
+        "Chest tightness, Bronchodilator, Cough relief, Shortness of breath, bronchial asthma, paroxysmal dyspnoea, colds, bronchitis, tracheitis",
       side_effects:
         "Insomnia, anxiety and restlessness. Nervous system disorders : Headache. Ear and labyrinth disorders The following side effect has been reported but the frequency is unknown: Vertigo. Cardiac disorders : Palpitations. Gastrointestinal disorders : Nausea, vomiting, abdominal pain and gastrointestinal bleeding. Diphenhydramine hydrochloride: Blood and the lymphatic system disorders : Thrombocytopenia. Metabolism and nutrition disorders : Anorexia or increased appetite. ",
       allergens:
@@ -21,16 +21,16 @@ function MedScan() {
         "ALCOPHYLLEX should be given with caution to patients with peptic ulceration, hyperthyroidism, hypertention, cardiac arrhythmias or other cardiovascular disease as these conditions may be exacerbated. ALCOPHYLLEX should also be given with caution to patients with heart failure, acute febrile illness and the elderly, since in all of these circumstances theophylline clearance may be decreased.",
     },
     {
-      image: "https://hipharm-eg.com/wp-content/uploads/2021/07/Flu-scaled.jpg",
-      names: "Flustat",
+      image: "https://clicks.co.za/medias/?context=bWFzdGVyfHByb2R1Y3QtaW1hZ2VzfDI0NTE0NHxpbWFnZS9qcGVnfHByb2R1Y3QtaW1hZ2VzL2hkMy9oZmYvMTAzODY0ODI2OTIxMjYuanBnfGE3N2RkOGNlYTYxOTU5OTdmNjY1MDc5NTczOWEyN2VhZTlhMDFlMzAwNTk2ODkzZjcwMWM2YWExYjNiMWIyNDQ",
+      names: "Smecta",
       usages:
-        "Adults: 2 capsules three times daily. Children (6 - 12 years): 1 capsule three times daily. Not recommended for children under the age of 6 years.",
+        "Symptomatic treatment of chronic functional diarrhoea in adults.Symptomatic treatment of pain associated with functional bowel diseases in adults.",
       side_effects:
-        "If any of the following happen, you should stop taking the and tell your doctor immediately or go to the casualty department at your nearest hospital: Red skin rash or allergic skin reaction, Sudden, life-threatening severe allergic reaction, difficulty in breathing/shortness of breath",
+        "may cause show rash, urticaria, angioedema and periorbital oedema",
       allergens:
-        "Do not take flustast capsules if you are allergic to any of the active or inactive ingredients. Each capsule contains:- Phenylephrine hydrochloride 5 mg Chlorpheniramine maleate 2 mg Paracetamol 300 mg Ascorbic acid 75 mg Caffeine 30 mg.",
+        "Please do not use Smecta if you are allergic to any of these ingredients: maltodextrin, sucrose, glyceryl triacetate (E1518), silicon dioxide (E551), ethyl alcohol, soya lecithin(E322)",
       precautions:
-        "Take special care with flustat if you suffer from liver or kidney disease,  if you have diabetes,  if you have a history of peptic ulcers, if you operate a vehicle or dangerous machinery.",
+        "You have acute or chronic diarrhoea and the problem does not disappear within 7 days.Diarrhoea is associated with a high temperature, sudden weight loss or vomiting.You have a history of severe constipation.",
     },
     {
       image:
@@ -77,9 +77,10 @@ function MedScan() {
         "Shake the bottle before use, If the symptoms persist for longer than 48 hours or the condition of the patient deteriorates, the product must be discontinued and a doctor consulted. In the treatment of diarrhoea it is important that hydration be maintained by giving adequate fluids and electrolytes .",
       side_effects:
         "Constipation may occur.Pectin may temporarily increase flatulence and distension.",
-      allergens: "No known allergens",
+      allergens:
+        "Should not be given to patients allergic to penicillin and cephalosporins as they may contain",
       precautions:
-        "Should not be given to patients with intestinal obstruction, and patients with spastic bowel conditions.",
+        "Should not be given to patients with intestinal obstruction, and patients with spastic bowel conditions. It is not recommended for chronic, severe or deep-seated infections such as subacute bacterial endocarditis, meningitis or syphilis",
     },
   ];
 

@@ -39,44 +39,44 @@
   </head>
 
   <body>
-      <div class="container1" id="scan">
-        <div class="navbar">
-          <nav>
-            <a href="#scan"><img src="./images/logo.png" alt="logo" class="logo">MedScan</a>
-            
-          </nav>
-        </div>
-      
+    <div class="container1" id="scan">
+      <div class="navbar">
+        <nav>
+          <a href="#scan"
+            ><img src="./images/logo.png" alt="logo" class="logo" />MedScan</a
+          >
+        </nav>
+      </div>
 
-      <div class="dis"><span class="disp"></span>
-       
-        <h1>Welcome to <span class="medi">MediScan</span></h1>
+      <div class="dis">
+        <span class="disp"></span>
+
+        <h1>Welcome to <span class="medi">MedScan</span></h1>
         <h4>Please scan QR code from package</h4>
-        
-    </div>
+      </div>
 
       <div class="scnn">
         <div class="scanner" style="width: 350px" id="reader"></div>
-    </div>
       </div>
+    </div>
 
     <div class="container2 hidden" id="product">
-        <div class="navbar">
-            <nav>
-              <a href="#scan"><img src="./images/logo.png" alt="logo" class="logo">MedScan</a>
-              
-            </nav>
-          <div class="dropdown">
-        <select class="topics">
-          <option value="all">Filter:</option>
-          <option value="Uses">Uses</option>
-          <option value="Effects">Side Effects</option>
-          <option value="Prec">Precaution</option>
-          <option value="Aller">Allergens</option>
-        </select>
+      <div class="navbar">
+        <nav>
+          <a href="#scan"
+            ><img src="./images/logo.png" alt="logo" class="logo" />MedScan</a
+          >
+        </nav>
+        <div class="dropdown">
+          <select class="topics">
+            <option value="all">Filter:</option>
+            <option value="Uses">Uses</option>
+            <option value="Effects">Side Effects</option>
+            <option value="Prec">Precaution</option>
+            <option value="Aller">Allergens</option>
+          </select>
+        </div>
       </div>
-          </div>
-      
 
       <div class="nameProd">
         <h3 class="displayName"></h3>
@@ -85,19 +85,25 @@
         <div class="images">
           <img src="" class="image" style="height: 250px; text-align: center" />
         </div>
-        <label for="displayUses">Usages:</label
-        ><span class="displayUses one"></span>
-        <br />
-        <label for="effects">Side-Effects:</label
-        ><span class="effects one"></span>
-        <br />
+       <div>
+        <label for="displayUses" class="l1">Usages:</label
+            ><span class="displayUses one"></span>
+            
+       </div>
+       <div>
+        <label for="effects" class="l2">Side-Effects:</label
+            ><span class="effects one"></span>
+       </div>
+        
         <div>
-          <label for="displayPrecaution">Precautions:</label
+          <label for="displayPrecaution" class="l3">Precautions:</label
           ><span class="displayPrecaution one"></span>
         </div>
+        
         <div>
-          <label for="Allergens">Allergens:</label
+          <label for="Allergens" class="l4">Allergens:</label
           ><span class="Allergens one"></span>
+          
         </div>
       </div>
       <button class="scanagain">Scan</button>
