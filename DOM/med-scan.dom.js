@@ -172,18 +172,22 @@ viewAllBtn.addEventListener('click', function (){
     var usesDiv = document.createElement("div");
     allUses = document.createTextNode("Uses     :"+data[i].use);
     usesDiv.appendChild(allUses);
+    usesDiv.style.margin = '1em'
     allContent.appendChild(usesDiv);
     var effectsDiv = document.createElement("div");
     allEffects = document.createTextNode("Side Effects     :"+data[i].effect);
     effectsDiv.appendChild(allEffects);
+    effectsDiv.style.margin = '1em'
     allContent.appendChild(effectsDiv);
     var precauDiv = document.createElement("div");
     allPrecau = document.createTextNode("Precautions     :"+data[i].precaut);
     precauDiv.appendChild(allPrecau);
+    precauDiv.style.margin = '1em'
     allContent.appendChild(precauDiv);
     var allerDiv = document.createElement("div");
     allAller = document.createTextNode("Allergens     :"+data[i].allergy);
     allerDiv.appendChild(allAller);
+    allerDiv.style.margin = '1em'
     allContent.appendChild(allerDiv);
     
   }
